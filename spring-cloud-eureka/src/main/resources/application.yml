@@ -1,25 +1,49 @@
 spring:
+  profiles:
+    active: dev
+
+---
+spring:
   application:
-    ## µ±Ç°·şÎñÃû
+    ### å½“å‰æœåŠ¡åå­—
     name: eureka-peer
+  profiles: dev
 server:
   port: 10000
 
+---
+spring:
+  application:
+    name: eureka-peer2
+  profiles: dev1
+server:
+  port: 10001
+
+---
+spring:
+  application:
+    name: eureka-peer3
+  profiles: dev2
+server:
+  port: 10002
+
+---
 eureka:
   instance:
     hostname: dev1
-## eureka clientµÄÅäÖÃ
+## eureka client
   client:
-    ##¼ìË÷·şÎñ
+    ##æ£€ç´¢æœåŠ¡
     fetch-registry: false
-    ##ÊÇ·ñ½«×Ô¼º×¢²áµ½eureka
+    ##æ˜¯å¦å°†è‡ªå·±æœåŠ¡æ³¨å†Œåˆ°eureka
     register-with-eureka: false
+    ##å®¢æˆ·ç«¯é»˜è®¤åŒºè¿™ä¸ªåœ°æ–¹æ‰¾æ³¨å†Œä¸­å¿ƒ
     service-url:
-      defaultZone: http://localhost:10000/eureka
-## eureka serverµÄÅäÖÃ
+      defaultZone: http://localhost:10000/eureka/
+## eureka server
   server:
-    ### µ±eurekaÆô¶¯Ê±£¬²»ÄÜ´Ó¼¯Èº½ÚµãÖĞ»ñÈ¡µ½instance×¢²áĞÅÏ¢£¬Ó¦¸ÃµÈ¶à¾Ã
+    ### å½“eurekaå¯åŠ¨æ—¶ï¼Œä¸èƒ½ä»é›†ç¾¤èŠ‚ç‚¹ä¸­è·å–åˆ°instanceæ³¨å†Œä¿¡æ¯ï¼Œåº”è¯¥ç­‰å¤šä¹…
     wait-time-in-ms-when-sync-empty: 0
     enable-self-preservation: true
-    ### eureka ¶à³¤Ê±¼ä¸üĞÂÒ»´ÎÊı¾İ
+    ### eureka å¤šé•¿æ—¶é—´æ›´æ–°ä¸€æ¬¡æ•°æ®
     peer-eureka-nodes-update-interval-ms: 100000
