@@ -6,17 +6,17 @@ server:
   port: 8092
 
 ## 禁止向eureka注册
-eureka:
-  client:
-    enabled: false
-
-## 脱离eureka来完成服务调用
-helloclient:
-  ribbon:
-    listOfServers: localhost:8001,localhost:8002
-
-
 #eureka:
 #  client:
-#   service-url:
-#      defaultZone: http://127.0.0.1:10000/eureka/
+#   enabled: false
+
+## 脱离eureka来完成服务调用
+#helloclient:
+#  ribbon:
+#   listOfServers: localhost:8001,localhost:8002
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10000/eureka/
