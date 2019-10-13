@@ -1,4 +1,4 @@
-package com.study.jesse.eureka;
+package com.study.jesse.hello;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.study.jesse.eureka;
+package com.study.jesse.hello;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

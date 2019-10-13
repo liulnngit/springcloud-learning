@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.study.jesse</groupId>
-    <artifactId>hello-demo</artifactId>
+    <artifactId>hello-demo-peer1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hello-demo</name>
-    <description>eureka project for Spring Boot</description>
+    <name>hello-demo-peer1</name>
+    <description>hellodemo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -39,7 +39,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <!--MySql-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -57,6 +56,8 @@
             <version>2.1.1.RELEASE</version>
         </dependency>
 
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -71,6 +72,7 @@
             <groupId>org.xmlunit</groupId>
             <artifactId>xmlunit-core</artifactId>
         </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -85,6 +87,14 @@
         </dependencies>
     </dependencyManagement>
 
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
@@ -93,13 +103,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-        </repository>
-    </repositories>
 
 </project>
