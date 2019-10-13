@@ -10,6 +10,11 @@ ribbon+hystrix进行整合
 通过Hystrix进行熔断的时候，需要注意超时时间，和线程池的大小
 注意配置超时时间
 
+zuul网关 
+请求拦截转发  将自定义的filter关掉
+http://localhost:7001/nick
+http://localhost:7001/tony/find-by-teacher?id=1
+
 
 
 
