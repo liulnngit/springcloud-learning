@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: helloclient
+  profiles:
+    active: dev
+
+server:
+  port: 8002
+
+#eureka:
+#  client:
+#    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10000/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
