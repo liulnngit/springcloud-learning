@@ -21,6 +21,13 @@ public class HelloController {
 
     @GetMapping("/user")
     public Object getUser(@Param("id")String id){
+        System.out.println("服务端已经接到请求，开始休眠3秒");
+        //进行休眠，便于测试Hystrix降级
+        try {
+            Thread.sleep(3000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("这是客户端1返回的结果");
         return userDao.get(id);
     }

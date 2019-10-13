@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
+@EnableEurekaClient
 public class RibbonDemoApplication {
 
     public static void main(String[] args) {
